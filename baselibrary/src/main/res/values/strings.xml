@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="warn_type_does_not_match"> defaultValue 类型不符合存储要求</string>
+</resources>

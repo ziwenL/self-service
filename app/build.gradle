@@ -1,0 +1,106 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'dagger.hilt.android.plugin'
+
+android {
+    compileSdkVersion BuildVersions.compileSdkVersion
+
+    defaultConfig {
+        applicationId "com.ziwenl.self_service"
+        minSdkVersion BuildVersions.minSdkVersion
+        targetSdkVersion BuildVersions.targetSdkVersion
+        versionCode BuildVersions.versionCode
+        versionName BuildVersions.versionName
+
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+//        Properties properties = new Properties()
+//        properties.load(project.rootProject.file('local.properties').newDataInputStream())
+//        buildConfigField "String", "CLIENT_ID", properties.getProperty("CLIENT_ID")
+//        buildConfigField "String", "CLIENT_SECRET", properties.getProperty("CLIENT_SECRET")
+    }
+
+    //MD5:  0E:86:6D:BB:27:A3:62:38:53:88:F1:87:83:24:1F:A4
+    //SHA1: 1F:DD:AD:3A:8A:D1:71:20:CD:F7:0E:6B:11:72:C9:C7:E3:ED:4B:C6
+    //SHA256: 76:38:00:B3:08:55:D8:A6:12:3B:0F:09:11:CF:3C:F1:5E:A3:F4:D2:60:38:3E:C4:03:5F:97:54:04:C7:E7:E7
+    //签名算法名称: SHA256withRSA
+    //版本: 3
+    signingConfigs {
+        release {
+            keyAlias 'self_service'
+            keyPassword 'selfservice'
+            storeFile file('../app/self_service.jks')
+            storePassword 'selfservice'
+        }
+    }
+    buildTypes {
+        release {
+            shrinkResources false
+//            minifyEnabled false
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            minifyEnabled false
+//            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            //buildConfigField "boolean", "LOG_DEBUG", "false"
+            signingConfig signingConfigs.release
+        }
+        debug {
+            shrinkResources false
+            minifyEnabled false
+            signingConfig signingConfigs.release
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation project(':baselibrary')
+
+    implementation Dependencies.appcompat
+    implementation Dependencies.recyclerview
+    implementation Dependencies.materialDesign
+    implementation Dependencies.constraintlayout
+    implementation Dependencies.flexbox
+    implementation Dependencies.swiperefreshlayout
+
+    debugImplementation Dependencies.leakCanaryDebug
+    debugImplementation Dependencies.leakCanaryDebugSupport
+    releaseImplementation Dependencies.leakCanaryRelease
+
+    kapt Dependencies.glideCompiler
+    kapt Dependencies.roomCompiler
+    kapt Dependencies.lifecycleCompiler
+
+    implementation Dependencies.daggerHilt
+    implementation Dependencies.daggerViewModel
+    kapt Dependencies.daggerAndroidCompiler
+    kapt Dependencies.daggerHiltCompiler
+
+    testImplementation Dependencies.junit4
+
+    androidTestImplementation Dependencies.espresso
+
+}
+
+kapt {
+    arguments {
+        arg("room.schemaLocation", "$projectDir/schemas".toString())
+    }
+}

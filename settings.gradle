@@ -1,0 +1,3 @@
+include ':baselibrary'
+include ':app'
+rootProject.name = "self-service"

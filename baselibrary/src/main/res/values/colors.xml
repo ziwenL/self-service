@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#009688</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#01DC4A</color>
+    <color name="colorAccent_pressed">#8001DC4A</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="common_dialog_bg">#4d000000</color>
+    <color name="common_toast_bg">#CC000000</color>
+
+    <color name="common_text">#333333</color>
+    <color name="common_text_pressed">#80333333</color>
+
+</resources>

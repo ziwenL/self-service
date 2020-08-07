@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">self-service</string>
+
+
+    <string name="accessibility_service">自助服务</string>
+
+    <string name="accessibility_service_description">钉钉自动考勤服务</string>
+
+    <string name="device_manager_is_closed">设备管理器被关闭,自动考勤服务已停止</string>
+    <string name="accessibility_service_is_disabled">无障碍服务被停用,自动考勤服务已停止</string>
+    <string name="today_punch_card_has_been_completed">今日打卡已完成</string>
+
+    <string name="next_punch_card_time">下一个打卡时间：%s  %s</string>
+    <string name="self_service_is_not_activated">未启动自助服务</string>
+    <string name="the_current_system_version_does_not_support">当前系统版本不支持</string>
+
+    <string name="simulate_unlock_failure">模拟解锁失败</string>
+    <string name="unable_click_universal_remote">无法点击万能遥控器</string>
+    <string name="failed_enter_negative_screen">进入负一屏失败</string>
+    <string name="the_clock_time_already_exists">该打卡时间已存在</string>
+
+    <string name="start_steps_check">启动前检测</string>
+    <string name="start_steps_has_open_rimet_permission">拥有钉钉启动权限</string>
+    <string name="start_steps_has_lock_screen_permission">拥有锁屏权限</string>
+    <string name="start_steps_has_lock_screen_password">已设置锁屏密码</string>
+    <string name="start_steps_has_attendance_time">已设置考勤时间</string>
+    <string name="start_steps_attendance_service_activated">自动考勤服务已启动</string>
+    <string name="start_steps_start_keep_alive_service">正在启动保活服务</string>
+    <string name="start_steps_successfully">启动成功</string>
+    <string name="tips_start_accessibility_service">未启动自动考勤服务，请在设置里面启用</string>
+    <string name="No_attendance_time_is_set">未设置考勤时间</string>
+    <string name="tips_set_attendance_time">未设置考勤时间，请在设置里面添加</string>
+    <string name="no_password_is_set">未设置锁屏密码</string>
+    <string name="tips_set_password">未设置锁屏密码，请在设置里面添加</string>
+    <string name="no_lock_screen_permission">无锁屏权限</string>
+    <string name="tips_get_lock_screen_permission">无锁屏权限，请在设置里面启用设备管理器</string>
+    <string name="no_open_rimet_permission">无钉钉权限启动权限</string>
+    <string name="tips_get_open_rimet_permission">无钉钉权限启动权限，请在测试里面尝试启动</string>
+
+
+    <string name="please_input_password">请输入密码</string>
+    <string name="stop_life_support_servie">停止服务</string>
+    <string name="confirm">确定</string>
+    <string name="start_life_support_service">启用</string>
+    <string name="life_support_service_is_running">自动考勤功能运行中，请先在首页停止后再尝试删除</string>
+    <string name="delete_this_attendance_time">是否删除该条考勤时间？</string>
+    <string name="cancel">取消</string>
+    <string name="lock_screen_password_has_stored">（是否已存储锁屏密码：%s）</string>
+    <string name="pass">跳过 %s s</string>
+    <string name="prepare_to_lock_screen">%s秒后锁屏</string>
+    <string name="ready_to_unlock">%s秒后解锁</string>
+    <string name="check_has_open_rimet_permission">是否拥有钉钉启动权限：%s</string>
+    <string name="closing_will_stop_service">关闭将停止自动考勤服务</string>
+
+</resources>

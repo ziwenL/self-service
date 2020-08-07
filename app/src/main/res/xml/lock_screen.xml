@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--该文件路径 res/xml/lock_screen.xml -->
+<device-admin xmlns:android="http://schemas.android.com/apk/res/android" >
+    <uses-policies>
+        <!-- 锁定屏幕 -->
+        <force-lock />
+    </uses-policies>
+</device-admin>

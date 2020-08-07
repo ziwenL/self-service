@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--常用弹窗主题-->
+    <style name="dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowSoftInputMode">stateHidden|adjustResize</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="dialogBright" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowSoftInputMode">stateHidden|adjustResize</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="dialogCommon" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowTitleStyle">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateAlwaysHidden</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:gravity">center</item>
+    </style>
+</resources>

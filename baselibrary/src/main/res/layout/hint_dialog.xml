@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="292dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/hint_dialog_bg"
+    android:orientation="vertical"
+    android:paddingTop="30dp">
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="24dp"
+        android:includeFontPadding="false"
+        android:textColor="#242424"
+        android:textStyle="bold"
+        android:visibility="gone"
+        tools:text="标题" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="34dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="30dp"
+        android:gravity="center"
+        android:textColor="#242424"
+        android:textSize="14sp"
+        tools:text="您的账号在其他设备登录，请及时修改您的登录密码" />
+
+    <LinearLayout
+        android:id="@+id/ll_btn_root"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_left"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/hint_dialog_cancel"
+            android:text="取消"
+            android:textColor="@android:color/white"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_right"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/hint_dialog_confirm"
+            android:text="确认"
+            android:textColor="@color/common_text"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="@drawable/hint_dialog_confirm_b"
+        android:text="确认"
+        android:textColor="@color/common_text"
+        android:textSize="15sp"
+        android:visibility="gone"
+        app:backgroundColor="@color/transparent" />
+</LinearLayout>

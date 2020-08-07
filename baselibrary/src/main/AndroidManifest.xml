@@ -1,0 +1,24 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ziwenl.baselibrary">
+
+    <!--android:allowBackup="false" 防止APP数据被恶意备份和恢复-->
+    <!--android:usesCleartextTraffic="true" Android 9.0限制了非加密的明文流量请求，通过该方法回避-->
+    <application
+        android:usesCleartextTraffic="true"
+        android:allowBackup="false">
+        <!--适配全面屏手机-->
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.1" />
+
+        <!--解决Android P系统无法使用 HTTP API问题-->
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <provider
+            android:name=".utils.LibContextProvider"
+            android:authorities="${applicationId}.contextProvider"
+            android:exported="false" />
+    </application>
+</manifest>

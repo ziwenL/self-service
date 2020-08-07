@@ -1,0 +1,31 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+        maven{ url'http://maven.aliyun.com/nexus/content/groups/public/' }
+        maven{ url'http://maven.aliyun.com/nexus/content/repositories/jcenter'}
+        google()
+    }
+    dependencies {
+        classpath BuildPlugins.androidGradle
+        classpath BuildPlugins.kotlinGradle
+        classpath BuildPlugins.daggerGradle
+    }
+}
+
+allprojects {
+    repositories {
+        maven{ url'http://maven.aliyun.com/nexus/content/groups/public/' }
+        maven{ url'http://maven.aliyun.com/nexus/content/repositories/jcenter'}
+        google()
+        maven { url "https://jitpack.io" }
+    }
+
+    tasks.withType(Javadoc) {
+        options.addStringOption('Xdoclint:none', '-quiet')
+        options.addStringOption('encoding', 'UTF-8')
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

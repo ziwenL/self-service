@@ -1,0 +1,103 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion BuildVersions.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion BuildVersions.minSdkVersion
+        targetSdkVersion BuildVersions.targetSdkVersion
+        versionCode BuildVersions.versionCode
+        versionName BuildVersions.versionName
+
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+
+    // support
+    implementation Dependencies.appcompat
+    implementation Dependencies.materialDesign
+    implementation Dependencies.recyclerview
+
+    api Dependencies.kotlinLibrary
+    api Dependencies.kotlinCoroutinesLibrary
+
+    api Dependencies.lifecycleExtension
+    api Dependencies.lifecycleJava8
+    api Dependencies.lifecycleKtx
+
+    api Dependencies.livedataKtx
+    implementation 'com.jeremyliao:live-event-bus-x:1.7.2'
+    //mmkv
+    implementation 'com.tencent:mmkv-static:1.1.1'
+
+    api Dependencies.viewModel
+    api Dependencies.viewModelKtx
+
+    api Dependencies.room
+    api Dependencies.roomKtx
+
+    api Dependencies.navigation
+    api Dependencies.navigationUi
+
+    api Dependencies.paging
+
+    // activity & fragment
+    api Dependencies.activity
+    api Dependencies.activityKtx
+    api Dependencies.fragment
+    api Dependencies.fragmentKtx
+
+    // retrofit
+    api Dependencies.retrofit
+    api Dependencies.retrofitGson
+    api Dependencies.retrofitRx
+
+    // dagger
+    api Dependencies.daggerHilt
+    api Dependencies.daggerViewModel
+    kapt Dependencies.daggerAndroidCompiler
+    kapt Dependencies.daggerHiltCompiler
+
+    // okhttp
+    api Dependencies.okhttp
+    api Dependencies.okhttpLogging
+
+    // glide
+    api Dependencies.glide
+    kapt Dependencies.glideCompiler
+
+    // logger
+    api Dependencies.timber
+
+    testImplementation Dependencies.junit4
+    androidTestImplementation Dependencies.espresso
+}
