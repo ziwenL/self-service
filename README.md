@@ -1,5 +1,7 @@
-## 基本介绍 [(博客地址)](https://blog.csdn.net/lzw398756924/article/details/107838664)
+# self-service
 <p>本项目是基于 <b>MVVM + Jetpack</b> 设计模式和组件进行开发，主要通过无障碍服务来实现钉钉自动打卡功能，目前只适用于 MIUI 系统</p>
+
+* <a href="https://blog.csdn.net/lzw398756924/article/details/107838664">博客地址</a>
 
 ### 效果演示
 <img src="https://img-blog.csdnimg.cn/20200807155648193.gif" title="到点唤醒屏幕并解锁，启动钉钉打卡后息屏，全程无手动操作">
@@ -86,7 +88,6 @@
 
 * [MMKV: An efficient, small, easy-to-use mobile key-value storage framework used in the WeChat application.](https://github.com/Tencent/MMKV)
 
-<a id="usage"></a>
 
 ## 最后
 
