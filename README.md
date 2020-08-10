@@ -1,5 +1,4 @@
-# self-service [博客地址](https://blog.csdn.net/lzw398756924/article/details/107838664)
-<h3 align="center">基本介绍</h3>
+## 基本介绍 [(博客地址)](https://blog.csdn.net/lzw398756924/article/details/107838664)
 <p>本项目是基于 <b>MVVM + Jetpack</b> 设计模式和组件进行开发，主要通过无障碍服务来实现钉钉自动打卡功能，目前只适用于 MIUI 系统</p>
 
 ### 效果演示
