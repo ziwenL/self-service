@@ -320,6 +320,7 @@ class SelfAccessibilityService : AccessibilityService() {
         val punchCardBtnNoteInfo =
             AccessibilityActionUtil.findNodeInfoByText(
                 this,
+                null,
                 "打卡",
                 noteInfoClassName
             )

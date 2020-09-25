@@ -147,28 +147,50 @@ class AccessibilityActionUtil {
          */
         fun findNodeInfoByText(
             service: AccessibilityService,
-            text: String,
+            text: String?,
+            desc: String?,
             className: String
         ): AccessibilityNodeInfo? {
             val nodeInfo = service.rootInActiveWindow
-            val list = nodeInfo.findAccessibilityNodeInfosByText(text)
+            val list = nodeInfo.findAccessibilityNodeInfosByText(text ?: desc)
             Timber.d("text = %s   list.size = %s", text, list.size)
             for (n in list) {
-                Timber.d("n.text = %s   n.className = %s", n.text, n.className)
+                Timber.d(
+                    "n.text = %s   n.contentDesc = %s   n.className = %s",
+                    n.text,
+                    n.contentDescription,
+                    n.className
+                )
                 if (n.className.equals(className)) {
-                    val bounds = Rect()
-                    n.getBoundsInScreen(bounds)
-                    Timber.d(
-                        "选中了这个 n.text = %s   n.className = %s \n bounds = %s",
-                        n.text,
-                        n.className,
-                        bounds
-                    )
-                    return n
+                    if (desc != null) {
+                        if (desc == n.contentDescription.toString()) {
+                            val bounds = Rect()
+                            n.getBoundsInScreen(bounds)
+                            Timber.d(
+                                "选中了这个 n.text = %s   n.className = %s \n bounds = %s",
+                                n.text,
+                                n.className,
+                                bounds
+                            )
+                            return n
+                        }
+                    } else {
+                        val bounds = Rect()
+                        n.getBoundsInScreen(bounds)
+                        Timber.d(
+                            "选中了这个 n.text = %s   n.className = %s \n bounds = %s",
+                            n.text,
+                            n.className,
+                            bounds
+                        )
+                        return n
+                    }
                 }
             }
             return null
         }
+
+
     }
 }
 
