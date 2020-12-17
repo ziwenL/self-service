@@ -16,8 +16,8 @@
 </div>
 
 ### 下载地址
-<img src="https://img-blog.csdnimg.cn/2020080717251682.png">
-<a href="http://d.firim.top/dah2">(点击跳转下载安装包)</a>
+<img src="https://img-blog.csdnimg.cn/20201217092751174.png">
+<a href="http://d.firim.top/dah2?release_id=5fdab3bd23389f69a5af1333">(点击跳转下载安装包)</a>
 
 ### <a href="https://github.com/ziwenL/self-service/blob/master/readme/README_STEP.md#%E4%BD%BF%E7%94%A8%E9%A1%BB%E7%9F%A5">使用须知</a>
 
